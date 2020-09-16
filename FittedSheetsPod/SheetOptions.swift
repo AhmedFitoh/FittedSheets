@@ -12,6 +12,8 @@ import UIKit
 public struct SheetOptions {
     public static var `default` = SheetOptions()
     
+    public var addOverlayView = true
+    
     public var pullBarHeight: CGFloat = 24
     
     public var presentingViewCornerRadius: CGFloat = 12

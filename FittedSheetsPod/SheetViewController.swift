@@ -208,10 +208,14 @@ public class SheetViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.clear
         self.addPanGestureRecognizer()
-        self.addOverlay()
-        self.addBlurBackground()
+        if options.addOverlayView {
+            self.addOverlay()
+            self.addBlurBackground()
+        }
         self.addContentView()
-        self.addOverlayTapView()
+        if options.addOverlayView {
+            self.addOverlayTapView()
+        }
         self.registerKeyboardObservers()
         self.resize(to: self.sizes.first ?? .intrinsic, animated: false)
     }
